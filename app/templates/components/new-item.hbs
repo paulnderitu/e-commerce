@@ -1,0 +1,36 @@
+{{#if addNewItem}}
+<h2>Add Item</h2>
+
+<div>
+<form>
+  <div class="form-group">
+    <label for="name">Name:</label>
+    {{input value=name id="name" placeholder=name}}
+  </div>
+  <div class="form-group">
+    <label for="description">Description:</label>
+    {{input value=description id="description" placeholder=description}}
+  </div>
+  <div class="form-group">
+    <label for="price">Price:</label>
+    {{input value=price id="price" placeholder=price}}
+  </div>
+  <div class="form-group">
+    <label for="condition">Condition:</label>
+    {{input value=condition id="condition"}}
+  </div>
+  <div class="form-group">
+    <label for="remaining">Remaining Items:</label>
+    {{input value=remaining id="remaining" placeholder=remaining}}
+  </div>
+  <div class="form-group">
+    <label for="image">Image Url:</label>
+    {{input value=image id="image"}}
+  </div>
+<button {{action 'saveItem1'}}>Save Item</button>
+
+</form>
+</div>
+{{else}}
+<button {{action 'itemFormShow'}}>New Item</button>
+{{/if}}

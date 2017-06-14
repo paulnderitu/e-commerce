@@ -1,0 +1,17 @@
+<div class="container-fluid">
+<div class="row">
+  <div class="col-md-6 col-xs-6 col-sm-6 col-lg-6">
+    <p> <img src="{{item.image}}"></p>
+  </div>
+
+  <div class="col-md-6 col-xs-6 col-sm-6 col-lg-6">
+    <br>{{item.name}}
+    <br>{{item.description}}
+    <br>{{item.price}}
+    <br>{{item.remaining}}
+    <br>
+    <button {{action 'delete' item}}>Delete Item</button>
+  </div>
+</div>
+
+</div>
