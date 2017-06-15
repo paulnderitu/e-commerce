@@ -1,0 +1,39 @@
+{{#if updateItemForm}}
+  <h4>Update {{item.price}}'s {{item.condition}} {{item.remaining}}</h4>
+  <div>
+    <form>
+      <div class="form-group">
+        <label for="name">Name</label>
+        {{input value=name id="name" placeholder=item.name}}
+      </div>
+
+      <div class="form-group">
+        <label for="description">Description</label>
+        {{input value=description id="description" placeholder=item.description}}
+      </div>
+
+      <div class="form-group">
+        <label for="price">Price</label>
+        {{input value=price id="price" placeholder=item.price}}
+      </div>
+
+      <div class="form-group">
+        <label for="condition">condition</label>
+        {{input value=condition id="condition" placeholder=item.condition}}
+      </div>
+      <div class="form-group">
+        <label for="remaining">Items Remaining</label>
+        {{input value=remaining id="remaining" placeholder=item.remaining}}
+      </div>
+
+      <div class="form-group">
+        <label for="image">Image URL</label>
+        {{input value=image id="image" placeholder=item.image}}
+      </div>
+
+      <button {{action 'update' rental}}>Save</button>
+    </form>
+  </div>
+{{else}}
+  <button {{action 'updateItemForm'}}>Update</button>
+{{/if}}
